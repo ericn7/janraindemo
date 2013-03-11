@@ -1,13 +1,39 @@
 <html>
   <head>
-    <title>RPX Now Example app</title>
+    <title>SE Assessment Project App</title>
+		
 
 		<script type="text/javascript">
 		(function() {
 				if (typeof window.janrain !== 'object') window.janrain = {};
 				if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
 				
+				/* _______________ can edit below this line _______________ */
+
 				janrain.settings.tokenUrl = '<%= base_url %>/callback';
+				janrain.settings.type = 'modal';
+				janrain.settings.appId = 'ohepnjkmkinclckcfpgm';
+				janrain.settings.appUrl = 'https://se-assessment-project-eric-nelson.rpxnow.com';
+				janrain.settings.providers = ["google","facebook"];
+				janrain.settings.providersPerPage = '4';
+				janrain.settings.format = 'two column';
+				janrain.settings.actionText = 'Sign in using your account with';
+				janrain.settings.showAttribution = true;
+				janrain.settings.fontColor = '#666666';
+				janrain.settings.fontFamily = 'Helvetica, lucida grande, Verdana, sans-serif';
+				janrain.settings.backgroundColor = '#ffffff';
+				janrain.settings.width = '392';
+				janrain.settings.modalBorderColor = '#000000';
+				janrain.settings.modalBorderRadius = '10';
+				janrain.settings.modalBorderWidth = '10';
+				janrain.settings.modalBorderOpacity = '0.5';
+				janrain.settings.buttonBorderColor = '#CCCCCC';
+				janrain.settings.buttonBorderRadius = '5';
+				janrain.settings.buttonBackgroundStyle = 'gradient';
+				janrain.settings.language = 'en';
+				janrain.settings.linkClass = 'janrainEngage';
+
+				/* _______________ can edit above this line _______________ */
 
 				function isReady() { janrain.ready = true; };
 				if (document.addEventListener) {
@@ -29,7 +55,7 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(e, s);
 		})();
-		</script>	
+		</script>
 
   </head>
   <body>
