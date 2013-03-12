@@ -9,24 +9,14 @@ helpers do
 end
 
 get '/' do  
-  #"Hello, World!" 
-
 	erb :home
 end  
 
 post '/callback' do
-	#"test"
 	#params[:token]
-#=begin
-		
-		token = params[:token]
-		
-		rpx = Rpx::RpxHelper.new('17a9dced3acb1171dfb1322435f7b65bdab74eb1', 'https://rpxnow.com', 'se-assessment-project-eric-nelson')
-		
-		authdata = rpx.auth_info(token)
-		
-		#render :text => 
-		authdata
-#=end
-
+	token = params[:token]
+	rpx = Rpx::RpxHelper.new('17a9dced3acb1171dfb1322435f7b65bdab74eb1', 'https://rpxnow.com', 'se-assessment-project-eric-nelson')
+	@authdata = rpx.auth_info(token)
+	#@authdata
+	erb :data
 end
